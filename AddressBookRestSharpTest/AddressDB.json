@@ -1,0 +1,96 @@
+{
+  "contacts": [
+    {
+      "id": 1,
+      "firstname": "Pritam",
+      "lastname": "Dash",
+      "phoneNo": "9439433808",
+      "address": "BB",
+      "city": "Puri",
+      "state": "Odisha",
+      "zip": "523356",
+      "email": "pd@gmail.com"
+    },
+    {
+      "id": 2,
+      "firstname": "Zeeshan",
+      "lastname": "Baksh",
+      "phoneNo": "9545855621",
+      "address": "Cuttack",
+      "city": "Cuttack",
+      "state": "Odisha",
+      "zip": "854693",
+      "email": "zb@gmail.com"
+    },
+    {
+      "id": 3,
+      "firstname": "ambit",
+      "lastname": "Tina",
+      "phoneNo": "7852455858",
+      "address": "lp",
+      "city": "Hyderabad",
+      "state": "Telengana",
+      "zip": "125456",
+      "email": "At@gmail.com"
+    },
+    {
+      "firstname": "sambit",
+      "lastname": "patra",
+      "phoneNo": "8545877878",
+      "address": "Puri",
+      "city": "BB",
+      "state": "Odisha",
+      "zip": "789546",
+      "email": "Sp@gmail.com",
+      "id": 6
+    },
+    {
+      "firstname": "Rk",
+      "lastname": "Panda",
+      "phoneNo": "8787544569",
+      "address": "KP"
+      "city": "Bangalore",
+      "state": "Karnataka",
+      "zip": "564218",
+      "email": "rkp@gmail.com",
+      "id": 7
+    },
+    {
+      "firstname": "Rk",
+      "lastname": "Panda",
+      "phoneNo": "8787544569",
+      "address": "KP"
+      "city": "Bangalore",
+      "state": "Karnataka",
+      "zip": "564218",
+      "email": "rkp@gmail.com",
+
+      "id": 8
+    },
+    {
+      "firstname": "Rk",
+      "lastname": "Panda",
+      "phoneNo": "8787544569",
+      "address": "KP"
+      "city": "Bangalore",
+      "state": "Karnataka",
+      "zip": "564218",
+      "email": "rkp@gmail.com",
+
+      "id": 9
+    },
+      
+    {
+      "firstname": "Rk",
+      "lastname": "Panda",
+      "phoneNo": "8787544569",
+      "address": "KP"
+      "city": "Bangalore",
+      "state": "Karnataka",
+      "zip": "564218",
+      "email": "rkp@gmail.com",
+
+      "id": 13
+    }
+  ]
+}

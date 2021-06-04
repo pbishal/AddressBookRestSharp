@@ -96,14 +96,14 @@ namespace AddressBookRestSharpTest
             //Initialize the request for PUT to add new employee
             RestRequest request = new RestRequest("/contacts/6", Method.PUT);
             JsonObject jsonObj = new JsonObject();
-            jsonObj.Add("firstname", "Bishal");
-            jsonObj.Add("lastname", "Pradhan");
-            jsonObj.Add("phoneNo", "7008949858");
-            jsonObj.Add("address", "patia");
-            jsonObj.Add("city", "Bhubaneswar");
-            jsonObj.Add("state", "Odisha");
-            jsonObj.Add("zip", "560012");
-            jsonObj.Add("email", "Pbishal@gmail.com");
+            jsonObj.Add("firstname", "Shikhar");
+            jsonObj.Add("lastname", "Dhawan");
+            jsonObj.Add("phoneNo", "7858070934");
+            jsonObj.Add("address", "indian cricket");
+            jsonObj.Add("city", "delhi");
+            jsonObj.Add("state", "Inida");
+            jsonObj.Add("zip", "535678");
+            jsonObj.Add("email", "sr7@gmail.com");
             //Added parameters to the request object such as the content-type and attaching the jsonObj with the request
             request.AddParameter("application/json", jsonObj, ParameterType.RequestBody);
 
@@ -113,26 +113,9 @@ namespace AddressBookRestSharpTest
             //Assert
             Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
             Contact contact = JsonConvert.DeserializeObject<Contact>(response.Content);
-            Assert.AreEqual("Bishal", contact.FirstName);
-            Assert.AreEqual("Pradhan", contact.LastName);
-            Assert.AreEqual("560012", contact.Zip);
-            Console.WriteLine(response.Content);
-        }
-
-        /// UC25 Ability to delete the contact details with given id
-
-        [TestMethod]
-        public void OnCallingDeleteAPI_ReturnSuccessStatus()
-        {
-            //Arrange
-            //Initialize the request for PUT to add new employee
-            RestRequest request = new RestRequest("/contacts/4", Method.DELETE);
-
-            //Act
-            IRestResponse response = client.Execute(request);
-
-            //Assert
-            Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
+            Assert.AreEqual("Shikhar", contact.FirstName);
+            Assert.AreEqual("Dhawan", contact.LastName);
+            Assert.AreEqual("535678", contact.Zip);
             Console.WriteLine(response.Content);
         }
     }
