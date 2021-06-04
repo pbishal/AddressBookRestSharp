@@ -96,14 +96,14 @@ namespace AddressBookRestSharpTest
             //Initialize the request for PUT to add new employee
             RestRequest request = new RestRequest("/contacts/6", Method.PUT);
             JsonObject jsonObj = new JsonObject();
-            jsonObj.Add("firstname", "Shikhar");
-            jsonObj.Add("lastname", "Dhawan");
-            jsonObj.Add("phoneNo", "7858070934");
-            jsonObj.Add("address", "indian cricket");
-            jsonObj.Add("city", "delhi");
-            jsonObj.Add("state", "Inida");
-            jsonObj.Add("zip", "535678");
-            jsonObj.Add("email", "sr7@gmail.com");
+            jsonObj.Add("firstname", "Bishal");
+            jsonObj.Add("lastname", "Pradhan");
+            jsonObj.Add("phoneNo", "7554589658");
+            jsonObj.Add("address", "KP");
+            jsonObj.Add("city", "Plb");
+            jsonObj.Add("state", "Oisha");
+            jsonObj.Add("zip", "762012");
+            jsonObj.Add("email", "Pb@gmail.com");
             //Added parameters to the request object such as the content-type and attaching the jsonObj with the request
             request.AddParameter("application/json", jsonObj, ParameterType.RequestBody);
 
@@ -113,9 +113,25 @@ namespace AddressBookRestSharpTest
             //Assert
             Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
             Contact contact = JsonConvert.DeserializeObject<Contact>(response.Content);
-            Assert.AreEqual("Shikhar", contact.FirstName);
-            Assert.AreEqual("Dhawan", contact.LastName);
-            Assert.AreEqual("535678", contact.Zip);
+            Assert.AreEqual("Bishal", contact.FirstName);
+            Assert.AreEqual("Pradhan", contact.LastName);
+            Assert.AreEqual("762012", contact.Zip);
+            Console.WriteLine(response.Content);
+        }
+        /// UC4 Ability to delete the contact details with given id
+
+        [TestMethod]
+        public void OnCallingDeleteAPI_ReturnSuccessStatus()
+        {
+            //Arrange
+            //Initialize the request for PUT to add new employee
+            RestRequest request = new RestRequest("/contacts/4", Method.DELETE);
+
+            //Act
+            IRestResponse response = client.Execute(request);
+
+            //Assert
+            Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
             Console.WriteLine(response.Content);
         }
     }
